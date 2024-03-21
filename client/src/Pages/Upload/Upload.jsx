@@ -4,6 +4,16 @@ import "./Upload.scss"
 
 const serverUrl = "http://localhost:3000/upload"
 
+
+//sound button
+function soundHandler(){
+    let sound = new Audio ('/src/assets/yee-haw.mp3');
+    console.log(sound)
+sound.play();
+}
+
+console.log(soundHandler);
+
 export function Upload() {
 
     const imagePreviewRef = useRef()
@@ -79,7 +89,7 @@ export function Upload() {
 
                     <img className="upload__preview" src="http://localhost:3000/empty.jpg" ref={imagePreviewRef}></img>
 
-                    <button>Toss yer image up on there</button>
+                    <button onClick={soundHandler}>Toss yer image up on there</button>
                 </form>
 
 
