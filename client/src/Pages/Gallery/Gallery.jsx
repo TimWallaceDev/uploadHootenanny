@@ -44,6 +44,9 @@ export function Gallery() {
                 </select>
                 <button className="gallery_button">Sift out the images</button>
             </form>
+            {images.map((image) => {
+        return <ImageCard images={images} />;
+      })}
         </>
     )
 }
