@@ -16,7 +16,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/upload' element={<Upload />} />
-          <Route path='/gallery' element={<Gallery />} />
+          <Route path='/gallery/:category' element={<Gallery />} />
         </Routes>
       </BrowserRouter>
     </>
