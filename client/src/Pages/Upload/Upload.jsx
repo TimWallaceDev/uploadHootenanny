@@ -7,6 +7,7 @@ const serverUrl = "http://localhost:3000/upload"
 export function Upload() {
 
     const imagePreviewRef = useRef()
+    const confirmRef = useRef()
 
     const [shareUrl, setShareUrl] = useState("")
 
@@ -46,7 +47,8 @@ export function Upload() {
             const url = response.data.image
             setShareUrl(url)
             console.log(url)
-
+            confirmRef.current.style.display = "block"
+            e.target.reset()
         } catch (err) {
             console.error(err)
         }
@@ -59,13 +61,13 @@ export function Upload() {
                 <h1 className="upload__heading">Upload Yer Image</h1>
                 <form className="upload__form">
                     <label className="upload__label">Image Title</label>
-                    <input type="text" name="title" placeholder="Image Title"></input>
+                    <input className='upload__input' type="text" name="title" placeholder="Image Title"></input>
 
                     <label className="upload__label">Uploader Name</label>
-                    <input type="text" name="name" placeholder="Your Name"></input>
+                    <input className='upload__input' type="text" name="name" placeholder="Your Name"></input>
 
                     <label className="upload__label">Category</label>
-                    <select name="category">
+                    <select className='upload__input' name="category">
                         <option value="horses">Horses</option>
                         <option value="saloon">Saloon</option>
                         <option value="wildlife">Wildlife</option>
@@ -75,17 +77,19 @@ export function Upload() {
                     </select>
 
                     <label className="upload__label">Choose Image</label>
-                    <input type="file" name="uploadImage" onChange={handlePreview}></input>
-
+                    <input className='upload__input upload__input--image' type="file" name="uploadImage" onChange={handlePreview}></input>
+                    
+                    <div className="upload__confirmation" ref={confirmRef}>
+                        <p className="upload__url">Image URL: <span className="upload__image-url">{shareUrl}</span></p>
+                    </div>
+                   
                     <img className="upload__preview" src="http://localhost:3000/empty.jpg" ref={imagePreviewRef}></img>
 
-                    <button>Toss yer image up on there</button>
+                    <button className="upload__button">Toss yer image up on there</button>
                 </form>
 
 
-                <div className="upload__confirmation">
-                    <p>Image URL: <span className="upload__image-url">{shareUrl}</span></p>
-                </div>
+
             </section>
         </>
     )
