@@ -80,7 +80,8 @@ export function Upload() {
                     <input className='upload__input upload__input--image' type="file" name="uploadImage" onChange={handlePreview}></input>
                     
                     <div className="upload__confirmation" ref={confirmRef}>
-                        <p className="upload__url">Image URL: <span className="upload__image-url">{shareUrl}</span></p>
+                        <h3 className="upload__confirmation-yee">Yeehaw! Upload's gone smooth as a prairie breeze</h3>
+                        <p className="upload__url">Image URL : <span className="upload__image-url">  {shareUrl}</span></p>
                     </div>
                    
                     <img className="upload__preview" src="http://localhost:3000/empty.jpg" ref={imagePreviewRef}></img>
