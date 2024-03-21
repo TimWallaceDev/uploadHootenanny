@@ -14,7 +14,7 @@ export default function NavBar() {
           <NavLink className='text' to="/upload">Upload</NavLink>
         </li>
         <li className="nav-list__item">
-          <NavLink className='text' to="/gallery">Gallery</NavLink>
+          <NavLink className='text' to="/gallery/all">Gallery</NavLink>
         </li>
       </ul>
     </div>
