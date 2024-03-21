@@ -1,6 +1,12 @@
 .upload {
   text-align: center;
   padding: 30px;
+
+  &__heading {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+
   &__form {
     display: flex;
     flex-direction: column;
@@ -8,24 +14,43 @@
   }
 
   &__label {
-    margin-top: 1rem;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
     margin-bottom: 5px;
   }
 
   &__input {
-    margin-top: 1rem;
-  }
+    width: 250px;
+    margin: auto;
+    margin-top: 0.5rem;
 
-  &__image {
-    margin: 10px 0 10px 0; 
-    justify-content: center;
+    &--image {
+      padding: 0.5rem 1rem;
+    }
+  }
+  &__preview {
+    width: 50%;
+    margin: 3rem auto;
+  }
+  &__file {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
   }
 
-  &__file{
-display: flex;
-justify-content: center;
-text-align: center;
+  &__button {
+    width: 300px;
+    margin: 0 auto;
+    background-color: orange;
+    padding: 0.5rem 2rem;
+  }
+
+  &__confirmation {
+    display: none;
+    font-size: 1rem;
+
+  }
+  &__url {
+    font-size: 2rem;
   }
 }
