@@ -1,0 +1,29 @@
+.home-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-image: url(../../assets/hackbackimage.png);
+  height: 200px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  align-items: center;
+}
+.home-title {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__header {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+}
+h1 {
+  margin: 0;
+}
+p {
+  padding: 10px;
+  text-align: center;
+}

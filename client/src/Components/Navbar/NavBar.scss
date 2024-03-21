@@ -1,0 +1,30 @@
+.nav-bar {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  background-color: beige;
+  justify-content: space-between  ;
+  &__logo {
+    width: 10%;
+    height: 10%;
+  }
+}
+
+.nav-list {
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  display: flex;
+  list-style-type: none;
+  &__item {
+    font-size: 10px;
+    margin-left: 10px;
+  }
+}
+
+.text {
+  text-decoration: none;
+  color: black;
+}
+

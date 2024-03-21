@@ -1,0 +1,31 @@
+.upload {
+  text-align: center;
+  padding: 30px;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &__label {
+    margin-top: 1rem;
+    margin-bottom: 5px;
+  }
+
+  &__input {
+    margin-top: 1rem;
+  }
+
+  &__image {
+    margin: 10px 0 10px 0; 
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__file{
+display: flex;
+justify-content: center;
+text-align: center;
+  }
+}
