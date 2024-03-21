@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams, useNavigate } from "react-router-dom"
 import ImageCard from "../../Components/ImageCard/ImageCard"
-
+import './Gallery.scss';
 import axios from "axios"
 
 export function Gallery() {
@@ -11,6 +11,7 @@ export function Gallery() {
     const [images, setImages] = useState(null)
     let navigate = useNavigate()
 
+    
     useEffect(() => {
 
         async function getAllImages() {
@@ -25,7 +26,7 @@ export function Gallery() {
     function handleSubmit(e){
         console.log("searching for images")
         const category = e.target.category.value
-        navigate("/gallery/" + category)
+        navigate("cd /gallery/" + category)
     }
 
     if (images === null){
@@ -36,8 +37,8 @@ export function Gallery() {
 
 
     return (
-        <>
-            <h1>Take a gander at them photos</h1>
+        <div className="gallery">
+            <h1 className="gallery-header">Take a gander at them photos</h1>
             <form className="gallery__form" onSubmit={handleSubmit}>
                 <label className="gallery__label">Category</label>
                 <select name="category">
@@ -53,6 +54,6 @@ export function Gallery() {
             {images.map((image) => {
         return <ImageCard image={image} />;
       })}
-        </>
+        </div>
     )
 }

@@ -1,0 +1,36 @@
+.card {
+  display: flex;
+  justify-content: center;
+  border: 1px solid beige;
+  border-radius: 4px;
+  flex-wrap: wrap;
+  padding: 1rem;
+  width: 30%;
+  margin: 1rem;
+  background-color: rgba(227, 186, 143, 0.5);
+  &__title {
+    width: 100%;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    margin: 0.5rem;
+  }
+
+  &__author {
+    width: 100%;
+    font-size: 1rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    padding: 0;
+  }
+
+  &__image {
+    object-fit: contain;
+    width: 100%;
+    border-radius: 4px;
+  }
+}
+
+.image-container {
+  width: 100%;
+}
