@@ -1,20 +1,65 @@
-.gallery-header{
-font-size: 2rem;
-margin-bottom: 1rem;
-margin-top: 2rem;
+.gallery-header {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    margin-top: 5rem;
 }
 
-.gallery{
-margin:2rem;
+.gallery {
+    margin: 2rem;
 
-&__label{
-width: 100%;
-margin-bottom: 1rem;
+    &__label {
+        display: block;
+        width: 400px;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    &__form {
+        margin: 0 auto;
+        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        label {
+            font-size: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        select {
+            width: 300px;
+            margin: 0 auto;
+            display: block;
+            padding: 0.5rem 2rem;
+            font-size: 1.5rem;
+        }
+
+        select:hover, button:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+
+        button {
+            display: block;
+            margin: 4rem auto;
+            margin-top: 1rem;
+            padding: 0.5rem 2rem;
+            background-color: orange;
+            font-size: 1.5rem;
+        }
+    }
 }
 
-&__form{
-margin-bottom: 1.5rem ;
-display: flex;
-flex-wrap: wrap;
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
+
+.no-images {
+    text-align: center;
+    width: 100%
 }

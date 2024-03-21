@@ -23,6 +23,7 @@
     width: 250px;
     margin: auto;
     margin-top: 0.5rem;
+    padding: 0.5rem 2rem;
 
     &--image {
       padding: 0.5rem 1rem;
@@ -39,10 +40,16 @@
   }
 
   &__button {
-    width: 300px;
+    font-size: 1.5rem;
+    width: 400px;
     margin: 0 auto;
     background-color: orange;
     padding: 0.5rem 2rem;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.3s;
+    }
   }
 
   &__confirmation {
