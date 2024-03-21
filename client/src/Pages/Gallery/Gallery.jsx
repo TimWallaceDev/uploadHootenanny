@@ -11,7 +11,7 @@ export function Gallery() {
     const [images, setImages] = useState(null)
     let navigate = useNavigate()
 
-    
+
     useEffect(() => {
 
         async function getAllImages() {
@@ -23,13 +23,14 @@ export function Gallery() {
         getAllImages()
     }, [category])
 
-    function handleSubmit(e){
+    function handleSubmit(e) {
+        e.preventDefault()
         console.log("searching for images")
         const category = e.target.category.value
-        navigate("cd /gallery/" + category)
+        navigate("/gallery/" + category)
     }
 
-    if (images === null){
+    if (images === null) {
         return (
             <h1>loading</h1>
         )
@@ -51,9 +52,13 @@ export function Gallery() {
                 </select>
                 <button className="gallery_button">Sift out the images</button>
             </form>
-            {images.map((image) => {
-        return <ImageCard image={image} />;
-      })}
+            <div className="cards">
+                {images.map((image) => {
+                    return <ImageCard image={image} />;
+                })}
+                {images.length > 0 || <h2 className="no-images">No sights of pictures here, partner</h2>}
+            </div>
+
         </div>
     )
 }

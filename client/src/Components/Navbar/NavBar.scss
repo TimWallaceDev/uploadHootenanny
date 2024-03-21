@@ -6,26 +6,28 @@
   background-color: burlywood;
   justify-content: space-between;
   &__logo {
-    width: 10%;
-    height: 10%;
+    height: 100px;
   }
 }
 
 .nav-list {
   padding: 0;
   margin: 0;
+  margin-right:5rem;
   align-items: center;
   display: flex;
   list-style-type: none;
+
   &__item {
-    font-size: 2rem;
     margin-left: 3rem;
+    display: flex;
+    align-items: center;
+  
   }
 }
 
 .text {
   text-decoration: none;
   color: black;
-  font-size: 1rem;
+  font-size: 2rem;
 }
-
