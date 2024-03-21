@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams, useNavigate } from "react-router-dom"
-
+import ImageCard from "../../Components/ImageCard/ImageCard"
 
 import axios from "axios"
 
@@ -11,6 +11,7 @@ export function Gallery() {
     const [images, setImages] = useState(null)
     let navigate = useNavigate()
 
+    
     useEffect(() => {
 
         async function getAllImages() {
@@ -25,7 +26,7 @@ export function Gallery() {
     function handleSubmit(e){
         console.log("searching for images")
         const category = e.target.category.value
-        navigate("/gallery/" + category)
+        navigate("cd /gallery/" + category)
     }
 
 
