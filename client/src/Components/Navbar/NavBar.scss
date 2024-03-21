@@ -1,7 +1,7 @@
 .nav-bar {
   box-sizing: border-box;
   width: 100%;
-  padding: 10px;
+  padding: 1rem 3rem 1rem 3rem;
   display: flex;
   background-color: beige;
   justify-content: space-between  ;
@@ -18,8 +18,8 @@
   display: flex;
   list-style-type: none;
   &__item {
-    font-size: 10px;
-    margin-left: 10px;
+    font-size: 2rem;
+    margin-left: 3rem;
   }
 }
 
